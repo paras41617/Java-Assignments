@@ -1,26 +1,42 @@
 package assignment_2;
 
 class Vehicle {
-    String name;
-    double currentSpeed;
-    double currentDirection;
+    private String name;
+    private double currentSpeed;
+    private double currentDirection;
 
-    Vehicle(String name) {
+    public Vehicle(String name) {
         this.name = name;
         this.currentSpeed = 0;
         this.currentDirection = 0;
     }
 
-    void move(double speed, double direction) {
+    public void move(double speed, double direction) {
         currentSpeed = speed;
         currentDirection = direction;
     }
 
-    void steer(double direction) {
+    public void steer(double direction) {
         currentDirection += direction;
     }
 
-    void stop() {
+    public void stop() {
         currentSpeed = 0;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getCurrentSpeed() {
+        return currentSpeed;
+    }
+
+    public double getCurrentDirection() {
+        return currentDirection;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

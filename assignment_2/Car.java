@@ -1,18 +1,22 @@
 package assignment_2;
 
 class Car extends Vehicle {
-    int currentGear;
+    private int currentGear;
 
-    Car(String name, int currentGear) {
+    public Car(String name, int currentGear) {
         super(name);
         this.currentGear = currentGear;
     }
 
-    void changeGear(int newGear) {
+    public void changeGear(int newGear) {
         currentGear = newGear;
     }
 
-    void changeSpeed(double newSpeed, double newDirection) {
+    public int getCurrentGear() {
+        return currentGear;
+    }
+
+    public void changeSpeed(double newSpeed, double newDirection) {
         move(newSpeed, newDirection);
     }
 }
